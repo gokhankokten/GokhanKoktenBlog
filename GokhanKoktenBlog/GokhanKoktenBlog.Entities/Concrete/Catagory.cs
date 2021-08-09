@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GokhanKoktenBlog.Entities.Concrete
 {
-    public class Catagory : EntitiyBase,IEntity
+    public class Catagory : EntityBase,IEntity
     {
         public string Name { get; set; }
         public string Description { get; set; }
