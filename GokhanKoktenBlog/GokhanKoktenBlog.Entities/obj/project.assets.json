@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "GokhanKoktenBlog.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/GokhanKoktenBlog.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GokhanKoktenBlog.Shared.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "GokhanKoktenBlog.Shared/1.0.0": {
+      "type": "project",
+      "path": "../GokhanKoktenBlog.Shared/GokhanKoktenBlog.Shared.csproj",
+      "msbuildProject": "../GokhanKoktenBlog.Shared/GokhanKoktenBlog.Shared.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "GokhanKoktenBlog.Shared >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Gökhan\\.nuget\\packages\\": {},
@@ -43,7 +62,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Shared\\GokhanKoktenBlog.Shared.csproj": {
+              "projectPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Shared\\GokhanKoktenBlog.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
