@@ -1,4 +1,5 @@
-﻿using GokhanKoktenBlog.Entities.Concrete;
+﻿using GokhanKoktenBlog.Data.Concrete.EnityFremework.Mappings;
+using GokhanKoktenBlog.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,17 @@ namespace GokhanKoktenBlog.Data.Concrete.EnityFremework.Contexts
         public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Unutma");
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=GokhanKoktenBlog;Trusted_Connection=True;");
+
+
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ArticleMap());
+            modelBuilder.ApplyConfiguration(new CategoryMap());
+            modelBuilder.ApplyConfiguration(new CommentMap());
+            modelBuilder.ApplyConfiguration(new RoleMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
         }
     }
 }

@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Concrete\EnityFremework\Mappings\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GokhanKoktenBlog.Entities\GokhanKoktenBlog.Entities.csproj" />
   </ItemGroup>
 

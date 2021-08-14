@@ -1,0 +1,12 @@
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Shared\bin\Debug\net5.0\GokhanKoktenBlog.Shared.deps.json
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Shared\bin\Debug\net5.0\GokhanKoktenBlog.Shared.dll
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Shared\bin\Debug\net5.0\ref\GokhanKoktenBlog.Shared.dll
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Shared\bin\Debug\net5.0\GokhanKoktenBlog.Shared.pdb
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Shared\obj\Debug\net5.0\GokhanKoktenBlog.Shared.csproj.AssemblyReference.cache
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Shared\obj\Debug\net5.0\GokhanKoktenBlog.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Shared\obj\Debug\net5.0\GokhanKoktenBlog.Shared.AssemblyInfoInputs.cache
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Shared\obj\Debug\net5.0\GokhanKoktenBlog.Shared.AssemblyInfo.cs
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Shared\obj\Debug\net5.0\GokhanKoktenBlog.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Shared\obj\Debug\net5.0\GokhanKoktenBlog.Shared.dll
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Shared\obj\Debug\net5.0\ref\GokhanKoktenBlog.Shared.dll
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Shared\obj\Debug\net5.0\GokhanKoktenBlog.Shared.pdb

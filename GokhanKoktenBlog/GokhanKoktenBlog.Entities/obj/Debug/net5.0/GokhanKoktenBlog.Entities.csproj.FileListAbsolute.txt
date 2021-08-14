@@ -1,0 +1,15 @@
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\bin\Debug\net5.0\GokhanKoktenBlog.Entities.deps.json
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\bin\Debug\net5.0\GokhanKoktenBlog.Entities.dll
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\bin\Debug\net5.0\ref\GokhanKoktenBlog.Entities.dll
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\bin\Debug\net5.0\GokhanKoktenBlog.Entities.pdb
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\bin\Debug\net5.0\GokhanKoktenBlog.Shared.dll
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\bin\Debug\net5.0\GokhanKoktenBlog.Shared.pdb
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\obj\Debug\net5.0\GokhanKoktenBlog.Entities.csproj.AssemblyReference.cache
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\obj\Debug\net5.0\GokhanKoktenBlog.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\obj\Debug\net5.0\GokhanKoktenBlog.Entities.AssemblyInfoInputs.cache
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\obj\Debug\net5.0\GokhanKoktenBlog.Entities.AssemblyInfo.cs
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\obj\Debug\net5.0\GokhanKoktenBlog.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\obj\Debug\net5.0\GokhanKoktenBlog.Entities.csproj.CopyComplete
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\obj\Debug\net5.0\GokhanKoktenBlog.Entities.dll
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\obj\Debug\net5.0\ref\GokhanKoktenBlog.Entities.dll
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Entities\obj\Debug\net5.0\GokhanKoktenBlog.Entities.pdb
