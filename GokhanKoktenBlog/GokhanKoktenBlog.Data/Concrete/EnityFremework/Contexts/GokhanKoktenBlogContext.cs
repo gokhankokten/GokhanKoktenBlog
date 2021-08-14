@@ -19,8 +19,6 @@ namespace GokhanKoktenBlog.Data.Concrete.EnityFremework.Contexts
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=localhost;Database=GokhanKoktenBlog;Trusted_Connection=True;");
-
-
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
