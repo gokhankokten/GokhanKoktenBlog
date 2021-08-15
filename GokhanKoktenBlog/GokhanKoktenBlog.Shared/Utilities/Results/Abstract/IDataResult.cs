@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GokhanKoktenBlog.Shared.Utilities.Results.Abstract
 {
-    interface IDataResult
+    public interface IDataResult<out T>:IResult
     {
+        public T Data { get; }
     }
 }
