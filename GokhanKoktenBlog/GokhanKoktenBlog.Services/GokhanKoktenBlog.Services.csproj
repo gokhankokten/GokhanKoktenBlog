@@ -1,7 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GokhanKoktenBlog.Data\GokhanKoktenBlog.Data.csproj" />
+    <ProjectReference Include="..\GokhanKoktenBlog.Entities\GokhanKoktenBlog.Entities.csproj" />
+    <ProjectReference Include="..\GokhanKoktenBlog.Shared\GokhanKoktenBlog.Shared.csproj" />
+  </ItemGroup>
 
 </Project>

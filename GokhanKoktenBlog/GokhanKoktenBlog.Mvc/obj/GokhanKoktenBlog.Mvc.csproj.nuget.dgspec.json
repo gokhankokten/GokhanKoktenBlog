@@ -4,6 +4,154 @@
     "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Mvc\\GokhanKoktenBlog.Mvc.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Data\\GokhanKoktenBlog.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Data\\GokhanKoktenBlog.Data.csproj",
+        "projectName": "GokhanKoktenBlog.Data",
+        "projectPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Data\\GokhanKoktenBlog.Data.csproj",
+        "packagesPath": "C:\\Users\\Gökhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Gökhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Entities\\GokhanKoktenBlog.Entities.csproj": {
+                "projectPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Entities\\GokhanKoktenBlog.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Entities\\GokhanKoktenBlog.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Entities\\GokhanKoktenBlog.Entities.csproj",
+        "projectName": "GokhanKoktenBlog.Entities",
+        "projectPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Entities\\GokhanKoktenBlog.Entities.csproj",
+        "packagesPath": "C:\\Users\\Gökhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Gökhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Shared\\GokhanKoktenBlog.Shared.csproj": {
+                "projectPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Shared\\GokhanKoktenBlog.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Mvc\\GokhanKoktenBlog.Mvc.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -12,6 +160,153 @@
         "projectPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Mvc\\GokhanKoktenBlog.Mvc.csproj",
         "packagesPath": "C:\\Users\\Gökhan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Mvc\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Gökhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Services\\GokhanKoktenBlog.Services.csproj": {
+                "projectPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Services\\GokhanKoktenBlog.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Services\\GokhanKoktenBlog.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Services\\GokhanKoktenBlog.Services.csproj",
+        "projectName": "GokhanKoktenBlog.Services",
+        "projectPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Services\\GokhanKoktenBlog.Services.csproj",
+        "packagesPath": "C:\\Users\\Gökhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Gökhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Data\\GokhanKoktenBlog.Data.csproj": {
+                "projectPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Data\\GokhanKoktenBlog.Data.csproj"
+              },
+              "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Entities\\GokhanKoktenBlog.Entities.csproj": {
+                "projectPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Entities\\GokhanKoktenBlog.Entities.csproj"
+              },
+              "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Shared\\GokhanKoktenBlog.Shared.csproj": {
+                "projectPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Shared\\GokhanKoktenBlog.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Shared\\GokhanKoktenBlog.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Shared\\GokhanKoktenBlog.Shared.csproj",
+        "projectName": "GokhanKoktenBlog.Shared",
+        "projectPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Shared\\GokhanKoktenBlog.Shared.csproj",
+        "packagesPath": "C:\\Users\\Gökhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gökhan\\Documents\\GitHub\\GokhanKoktenBlog\\GokhanKoktenBlog\\GokhanKoktenBlog.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -47,6 +342,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,9 +359,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

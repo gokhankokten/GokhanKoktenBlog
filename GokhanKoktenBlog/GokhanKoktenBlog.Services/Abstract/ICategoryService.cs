@@ -13,8 +13,10 @@ namespace GokhanKoktenBlog.Services.Abstract
 {
     public interface ICategoryService
     {
-        Task<IDataResult<Category>> Get(int categoyId);
-        Task<IDataResult<IList<Category>>> GetAll();
+        Task<IDataResult<CategoryDto>> Get(int categoyId);
+        Task<IDataResult<CategoryDto>> GetAll();
+        Task<IDataResult<CategoryDto>> GetAllNonDeleted();
+        Task<IDataResult<CategoryDto>> GetAllNonDeletedAndActive();
         Task<IResult> Add(CategoryAddDto categoryAddDto, string creatByName);
         Task<IResult> Delete(int categoryId,string modifiedByName);
         Task<IResult> Update(CategoryUpdateDto categoryUpdateDto, string modifiedNyName);
