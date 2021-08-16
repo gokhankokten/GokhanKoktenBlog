@@ -17,6 +17,8 @@ namespace GokhanKoktenBlog.Mvc
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
+            services.AddAutoMapper(typeof(Startup));
             services.LoadMyServices();
         }
 
@@ -26,16 +28,20 @@ namespace GokhanKoktenBlog.Mvc
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();
             }
 
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapAreaControllerRoute(
+                    "Admin",
+                    "Admin",
+                    "Admin/{controller=Home}/{action=index}/{id?}"
+                    );
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
