@@ -10,5 +10,6 @@ namespace GokhanKoktenBlog.Shared.Data.Abstract
     public abstract class DtoGetBase
     {
         public virtual ResultStatus ResultStatus { get; set; }
+        public string Message { get; set; }
     }
 }

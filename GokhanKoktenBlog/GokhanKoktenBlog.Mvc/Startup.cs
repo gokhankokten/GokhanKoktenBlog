@@ -1,3 +1,4 @@
+using GokhanKoktenBlog.Services.AutoMapped.Profiles;
 using GokhanKoktenBlog.Services.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,7 +19,7 @@ namespace GokhanKoktenBlog.Mvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(typeof(ArticleProfile),typeof(CategoryProfile));
             services.LoadMyServices();
         }
 

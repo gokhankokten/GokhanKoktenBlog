@@ -2,10 +2,11 @@
 @model CategoryListDto
 
 
-@{
-    Layout = "_Layout";
-    ViewBag.Title = "Kategoriler Index";
- }
+@{ Layout = "_Layout";
+    ViewBag.Title = "Kategoriler Index"; }
+
+@if (Model.ResultStatus == GokhanKoktenBlog.Shared.Utilities.Results.ComplexTypes.ResultStatus.Success)
+{
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table mr-1"></i>
@@ -26,7 +27,7 @@
                         <th>Oluşturulan Kullanıcı</th>
                         <th>Son Düzenleme Tarihi </th>
                         <th>Son Düzenleyen Kullanıcı Adı</th>
-                        
+
                     </tr>
                 </thead>
                 <tfoot>
@@ -43,34 +44,95 @@
                         <th>Son Düzenleyen Kullanıcı Adı</th>
                     </tr>
                 </tfoot>
-                <tbody>                    
+                <tbody>
                     @foreach (var Categoryitem in Model.CategoryList)
                     {
-                    <tr>
-                        <td>@Categoryitem.Id</td>
-                        <td>@Categoryitem.Name</td>
-                        <td>@Categoryitem.Description</td>
-                        <td>@Categoryitem.IsActive</td>
-                        <td>@Categoryitem.IsDeleted</td>
-                        <td>@Categoryitem.Note</td>
-                        <td>@Categoryitem.CreatedDate.ToShortDateString()</td>
-                        <td>@Categoryitem.CreatedByName</td>
-                        <td>@Categoryitem.CreatedDate.ToShortDateString()</td>
-                        <td>@Categoryitem.ModifiedByName</td>
+    <tr>
+        <td>@Categoryitem.Id</td>
+        <td>@Categoryitem.Name</td>
+        <td>@Categoryitem.Description</td>
+        <td>@Categoryitem.IsActive</td>
+        <td>@Categoryitem.IsDeleted</td>
+        <td>@Categoryitem.Note</td>
+        <td>@Categoryitem.CreatedDate.ToShortDateString()</td>
+        <td>@Categoryitem.CreatedByName</td>
+        <td>@Categoryitem.CreatedDate.ToShortDateString()</td>
+        <td>@Categoryitem.ModifiedByName</td>
 
-                    </tr>
-                    }
+    </tr>
+}
                 </tbody>
             </table>
         </div>
     </div>
-</div>
+</div>}
+@if (Model.ResultStatus == GokhanKoktenBlog.Shared.Utilities.Results.ComplexTypes.ResultStatus.Error)
+{
+    <div class="alert alert-danger" >
+        @Model.Message<br />
+        Dashboard Sayfasına Geri Dönmek İçin Lüfen <a class="alert-link" asp-area="Admin" asp-controller="Home" asp-action="Index">Tıklayınız.</a>
+
+    </div>
+}
 
 @section scripts{
-<script>
-    $(document).ready(function () {
-        $('#categoryTable').DataTable();
-    });
+    <script>
+        $(document).ready(function () {
+            $('#categoryTable').DataTable({
+                dom:
+                    "<'row'<'col-sm-3'l><'col-sm-6 text-center'B><'col-sm-3'f>>" +
+                    "<'row'<'col-sm-12'tr>>" +
+                    "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+                buttons: [
+                    {
+                        text: 'Ekle',
+                        className: 'btn btn-success',
+                        action: function (e, dt, node, config) {
+                            alert('Ekle butonuna basıldı.');
+                        }
+                    },
+                    {
+                        text: 'Yenile',
+                        className: 'btn btn-warning',
+                        action: function (e, dt, node, config) {
+                            alert('Yenile butonuna basıldı.');
+                        }
+                    }
+                ],
+                language: {
+                    "sDecimal": ",",
+                    "sEmptyTable": "Tabloda herhangi bir veri mevcut değil",
+                    "sInfo": "TOTAL kayıttan START - END arasındaki kayıtlar gösteriliyor",
+                    "sInfoEmpty": "Kayıt yok",
+                    "sInfoFiltered": "(MAX kayıt içerisinden bulunan)",
+                    "sInfoPostFix": "",
+                    "sInfoThousands": ".",
+                    "sLengthMenu": "Sayfada MENU kayıt göster",
+                    "sLoadingRecords": "Yükleniyor...",
+                    "sProcessing": "İşleniyor...",
+                    "sSearch": "Ara:",
+                    "sZeroRecords": "Eşleşen kayıt bulunamadı",
+                    "oPaginate": {
+                        "sFirst": "İlk",
+                        "sLast": "Son",
+                        "sNext": "Sonraki",
+                        "sPrevious": "Önceki"
+                    },
+                    "oAria": {
+                        "sSortAscending": ": artan sütun sıralamasını aktifleştir",
+                        "sSortDescending": ": azalan sütun sıralamasını aktifleştir"
+                    },
+                    "select": {
+                        "rows": {
+                            "_": "%d kayıt seçildi",
+                            "0": "",
+                            "1": "1 kayıt seçildi"
+                        }
+                    }
+                }
 
-</script>
+            });
+        });
+
+    </script>
 }

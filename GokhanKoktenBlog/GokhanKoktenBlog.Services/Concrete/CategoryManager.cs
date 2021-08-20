@@ -30,9 +30,8 @@ namespace GokhanKoktenBlog.Services.Concrete
             var category = _mapper.Map<Category>(categoryAddDto);
             category.CreatedByName = createByName;
             category.ModifiedByName = createByName;
-            await _unitOfWork.Categories.AddAsync(category)
-           .ContinueWith(t => _unitOfWork.SaveAsync());
-            //await _unitOfWork.SaveAsync();
+            await _unitOfWork.Categories.AddAsync(category)           ;
+            await _unitOfWork.SaveAsync();
             return new Result(ResultStatus.Success, $"{categoryAddDto.Name} adlı kategory eklenmiştir.");
         }
 
@@ -45,7 +44,7 @@ namespace GokhanKoktenBlog.Services.Concrete
                 category.IsDeleted = true;
                 category.ModifiedByName = modifiedByName;
                 category.ModifiedDate = DateTime.Now;
-                await _unitOfWork.Categories.UpdateAsync(category).ContinueWith(t => _unitOfWork.SaveAsync());
+                await _unitOfWork.Categories.UpdateAsync(category);
                 await _unitOfWork.SaveAsync();
                 return new Result(ResultStatus.Success, $"{category.Name} Adlı Kategory Silindi.");
             };
@@ -74,11 +73,21 @@ namespace GokhanKoktenBlog.Services.Concrete
             {
                 return new DataResult<CategoryListDto>(ResultStatus.Success, new CategoryListDto()
                 {
-                    ResultStatus = ResultStatus.Success,
-                    CategoryList = categorylist
+                    CategoryList = categorylist,
+                    ResultStatus = ResultStatus.Error
+
                 });
             }
-            return new DataResult<CategoryListDto>(ResultStatus.Error, null, "Kategory Bulunamadı.");
+            return new DataResult<CategoryListDto>(ResultStatus.Error, new CategoryListDto
+            {
+                CategoryList = null,
+                ResultStatus = ResultStatus.Error,
+                Message = "Hiç bir Kategori Bulunamadı"
+
+            }, "Kategory Bulunamadı.");
+
+                         
+                
         }
 
         public async Task<IDataResult<CategoryListDto>> GetAllNonDeleted()
@@ -126,7 +135,8 @@ namespace GokhanKoktenBlog.Services.Concrete
         {
             var category = _mapper.Map<Category>(categoryUpdateDto);
             category.ModifiedByName = modifiedNyName;
-            await _unitOfWork.Categories.UpdateAsync(category).ContinueWith(t => _unitOfWork.SaveAsync());
+            await _unitOfWork.Categories.UpdateAsync(category);
+            await _unitOfWork.SaveAsync();
             return new Result(ResultStatus.Success, $"{categoryUpdateDto.Name} Adlı kategory Güncelleme Başarı ile Yapıldı.");
 
         }

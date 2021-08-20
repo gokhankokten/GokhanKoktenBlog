@@ -19,14 +19,13 @@ namespace GokhanKoktenBlog.Mvc.Areas.Admin.Controllers
             _catetegoryService = catetegoryService;
         }
 
-        public async Task <IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
             var result = await _catetegoryService.GetAll();
-            if (result.ResultStatus==ResultStatus.Success)
-            {
-                return View(result.Data);
-            }
-            return View();
+
+            return View(result.Data);
+
+
         }
     }
 }
