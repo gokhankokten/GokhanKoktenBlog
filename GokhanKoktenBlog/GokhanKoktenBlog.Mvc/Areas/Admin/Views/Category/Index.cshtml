@@ -1,0 +1,76 @@
+﻿@using GokhanKoktenBlog.Entities.Dtos
+@model CategoryListDto
+
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Kategoriler Index";
+ }
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table mr-1"></i>
+        Kategoriler
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="categoryTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Adı</th>
+                        <th>Açıklaması</th>
+                        <th>Aktif Mi?</th>
+                        <th>Silinmiş Mi?</th>
+                        <th>Not</th>
+                        <th>Oluşturulma Tarihi</th>
+                        <th>Oluşturulan Kullanıcı</th>
+                        <th>Son Düzenleme Tarihi </th>
+                        <th>Son Düzenleyen Kullanıcı Adı</th>
+                        
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Adı</th>
+                        <th>Açıklaması</th>
+                        <th>Aktif Mi?</th>
+                        <th>Silinmiş Mi?</th>
+                        <th>Not</th>
+                        <th>Oluşturulma Tarihi</th>
+                        <th>Oluşturulan Kullanıcı</th>
+                        <th>Son Düzenleme Tarihi </th>
+                        <th>Son Düzenleyen Kullanıcı Adı</th>
+                    </tr>
+                </tfoot>
+                <tbody>                    
+                    @foreach (var Categoryitem in Model.CategoryList)
+                    {
+                    <tr>
+                        <td>@Categoryitem.Id</td>
+                        <td>@Categoryitem.Name</td>
+                        <td>@Categoryitem.Description</td>
+                        <td>@Categoryitem.IsActive</td>
+                        <td>@Categoryitem.IsDeleted</td>
+                        <td>@Categoryitem.Note</td>
+                        <td>@Categoryitem.CreatedDate.ToShortDateString()</td>
+                        <td>@Categoryitem.CreatedByName</td>
+                        <td>@Categoryitem.CreatedDate.ToShortDateString()</td>
+                        <td>@Categoryitem.ModifiedByName</td>
+
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+<script>
+    $(document).ready(function () {
+        $('#categoryTable').DataTable();
+    });
+
+</script>
+}

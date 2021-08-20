@@ -397,3 +397,4 @@ C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKokten
 C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutCssPartial.cshtml.g.cs
 C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutJsPartial.cshtml.g.cs
 C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutSideBarPartial.cshtml.g.cs
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
