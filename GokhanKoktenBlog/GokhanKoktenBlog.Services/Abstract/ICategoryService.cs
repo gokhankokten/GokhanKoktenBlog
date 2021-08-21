@@ -17,9 +17,9 @@ namespace GokhanKoktenBlog.Services.Abstract
         Task<IDataResult<CategoryListDto>> GetAll();
         Task<IDataResult<CategoryListDto>> GetAllNonDeleted();
         Task<IDataResult<CategoryListDto>> GetAllNonDeletedAndActive();
-        Task<IResult> Add(CategoryAddDto categoryAddDto, string creatByName);
+        Task<IDataResult<CategoryDto>> Add(CategoryAddDto categoryAddDto, string creatByName);
         Task<IResult> Delete(int categoryId,string modifiedByName);
-        Task<IResult> Update(CategoryUpdateDto categoryUpdateDto, string modifiedNyName);
+        Task<IDataResult<CategoryDto>> Update(CategoryUpdateDto categoryUpdateDto, string modifiedNyName);
         Task<IResult> HardDelete(int categoryId);
 
 
