@@ -7,74 +7,72 @@
 
 @if (Model.ResultStatus == GokhanKoktenBlog.Shared.Utilities.Results.ComplexTypes.ResultStatus.Success)
 {
-    <div id="modalPlaceHolder" aria-hidden="true"></div>
-<div class="card mb-4">
-    <div class="card-header">
-        <i class="fas fa-table mr-1"></i>
-        Kategoriler
-    </div>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="categoryTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Adı</th>
-                        <th>Açıklaması</th>
-                        <th>Aktif Mi?</th>
-                        <th>Silinmiş Mi?</th>
-                        <th>Not</th>
-                        <th>Oluşturulma Tarihi</th>
-                        <th>Oluşturulan Kullanıcı</th>
-                        <th>Son Düzenleme Tarihi </th>
-                        <th>Son Düzenleyen Kullanıcı Adı</th>
+<div id="modalPlaceHolder" aria-hidden="true"></div>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table mr-1"></i>
+                        Kategoriler
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="categoryTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Adı</th>
+                                        <th>Açıklaması</th>
+                                        <th>Aktif Mi?</th>
+                                        <th>Silinmiş Mi?</th>
+                                        <th>Not</th>
+                                        <th>Oluşturulma Tarihi</th>
+                                        <th>Oluşturulan Kullanıcı</th>
+                                        <th>Son Düzenleme Tarihi </th>
+                                        <th>Son Düzenleyen Kullanıcı Adı</th>
 
-                    </tr>
-                </thead>
-                <tfoot>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Adı</th>
+                                        <th>Açıklaması</th>
+                                        <th>Aktif Mi?</th>
+                                        <th>Silinmiş Mi?</th>
+                                        <th>Not</th>
+                                        <th>Oluşturulma Tarihi</th>
+                                        <th>Oluşturulan Kullanıcı</th>
+                                        <th>Son Düzenleme Tarihi </th>
+                                        <th>Son Düzenleyen Kullanıcı Adı</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @foreach (var Categoryitem in Model.CategoryList)
+                                    {
                     <tr>
-                        <th>ID</th>
-                        <th>Adı</th>
-                        <th>Açıklaması</th>
-                        <th>Aktif Mi?</th>
-                        <th>Silinmiş Mi?</th>
-                        <th>Not</th>
-                        <th>Oluşturulma Tarihi</th>
-                        <th>Oluşturulan Kullanıcı</th>
-                        <th>Son Düzenleme Tarihi </th>
-                        <th>Son Düzenleyen Kullanıcı Adı</th>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    @foreach (var Categoryitem in Model.CategoryList)
-                    {
-    <tr>
-        <td>@Categoryitem.Id</td>
-        <td>@Categoryitem.Name</td>
-        <td>@Categoryitem.Description</td>
-        <td>@Categoryitem.IsActive</td>
-        <td>@Categoryitem.IsDeleted</td>
-        <td>@Categoryitem.Note</td>
-        <td>@Categoryitem.CreatedDate.ToShortDateString()</td>
-        <td>@Categoryitem.CreatedByName</td>
-        <td>@Categoryitem.CreatedDate.ToShortDateString()</td>
-        <td>@Categoryitem.ModifiedByName</td>
+                        <td>@Categoryitem.Id</td>
+                        <td>@Categoryitem.Name</td>
+                        <td>@Categoryitem.Description</td>
+                        <td>@Categoryitem.IsActive</td>
+                        <td>@Categoryitem.IsDeleted</td>
+                        <td>@Categoryitem.Note</td>
+                        <td>@Categoryitem.CreatedDate.ToShortDateString()</td>
+                        <td>@Categoryitem.CreatedByName</td>
+                        <td>@Categoryitem.CreatedDate.ToShortDateString()</td>
+                        <td>@Categoryitem.ModifiedByName</td>
 
-    </tr>
-}
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>}
+                    </tr>}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>}
 @if (Model.ResultStatus == GokhanKoktenBlog.Shared.Utilities.Results.ComplexTypes.ResultStatus.Error)
 {
-    <div class="alert alert-danger" >
-        @Model.Message<br />
-        Dashboard Sayfasına Geri Dönmek İçin Lüfen <a class="alert-link" asp-area="Admin" asp-controller="Home" asp-action="Index">Tıklayınız.</a>
+<div class="alert alert-danger">
+    @Model.Message<br />
+    Dashboard Sayfasına Geri Dönmek İçin Lüfen <a class="alert-link" asp-area="Admin" asp-controller="Home" asp-action="Index">Tıklayınız.</a>
 
-    </div>
-}
+</div>}
 
 @section scripts{
     <script>
@@ -92,7 +90,7 @@
                         },
                         className: 'btn btn-success',
                         action: function (e, dt, node, config) {
-                          
+
                         }
                     },
                     {
@@ -147,6 +145,51 @@
                     });
 
                 });
+                placeHolderDiv.on('click',
+                    '#btnSave',
+                    function (event) {
+                        event.preventDefault();
+                        const form = $('#form-category-add');
+                        const actionUrl = form.attr('action');
+                        const dataToSend = form.serialize();
+                        $.post(actionUrl, dataToSend).done(function (data) {
+                            console.log(data);
+                            const categoryAddAjaxModel = jQuery.parseJSON(data);
+                            console.log(categoryAddAjaxModel);
+                            const newFormBody = $('.modal-body', categoryAddAjaxModel.CategoryAddPartial);
+                            placeHolderDiv.find('.modal-body').replaceWith(newFormBody);
+                            const isValid = newFormBody.find('[name="IsValid"]').val() === 'True';
+                            if (isValid) {
+                                placeHolderDiv.find('.modal').modal('hide');
+                                const newTableRow = `
+                                <tr>
+                                                    <td>${categoryAddAjaxModel.CategoryDto.Category.Id}</td>
+                                                    <td>${categoryAddAjaxModel.CategoryDto.Category.Name}</td>
+                                                    <td>${categoryAddAjaxModel.CategoryDto.Category.Description}</td>
+                                                    <td>${convertFirstLetterToUpperCase(categoryAddAjaxModel.CategoryDto.Category.IsActive.toString())}</td>
+                                                    <td>${convertFirstLetterToUpperCase(categoryAddAjaxModel.CategoryDto.Category.IsDeleted.toString())}</td>
+                                                    <td>${categoryAddAjaxModel.CategoryDto.Category.Note}</td>
+                                                    <td>${convertToShortDate(categoryAddAjaxModel.CategoryDto.Category.CreatedDate)}</td>
+                                                    <td>${categoryAddAjaxModel.CategoryDto.Category.CreatedByName}</td>
+                                                    <td>${convertToShortDate(categoryAddAjaxModel.CategoryDto.Category.ModifiedDate)}</td>
+                                                    <td>${categoryAddAjaxModel.CategoryDto.Category.ModifiedByName}</td>
+                                                </tr>`;
+                                const newTableRowObject = $(newTableRow);
+                                newTableRowObject.hide();
+                                $('#categoryTable').append(newTableRowObject);
+                                newTableRowObject.fadeIn(3500);
+                                toastr.success(`${categoryAddAjaxModel.CategoryDto.Message}`, 'Başarılı İşlem!');
+                            } else {
+                                let summaryText = "";
+                                $('#validation-summary > ul > li').each(function () {
+                                    let text = $(this).text();
+                                    summaryText = `*${text}\n`;
+                                });
+                                toastr.warning(summaryText);
+                            }
+                        });
+                    });
+
             });
         });
 
