@@ -27,5 +27,10 @@ namespace GokhanKoktenBlog.Mvc.Areas.Admin.Controllers
 
 
         }
+        public IActionResult Add()
+        {
+            return PartialView("_CategoryAddPartial");
+        }
+
     }
 }
