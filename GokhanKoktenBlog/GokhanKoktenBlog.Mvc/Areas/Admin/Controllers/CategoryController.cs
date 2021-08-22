@@ -25,7 +25,7 @@ namespace GokhanKoktenBlog.Mvc.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var result = await _categoryService.GetAll();
+            var result = await _categoryService.GetAllNonDeletedAndActive();
 
             return View(result.Data);
 
@@ -63,7 +63,7 @@ namespace GokhanKoktenBlog.Mvc.Areas.Admin.Controllers
         }
         public async Task<JsonResult> GetAllCategories() 
         {
-            var result = await _categoryService.GetAll();
+            var result = await _categoryService.GetAllNonDeletedAndActive();
             var categories = JsonSerializer.Serialize(result.Data, new JsonSerializerOptions
             {
                 ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve
@@ -76,8 +76,8 @@ namespace GokhanKoktenBlog.Mvc.Areas.Admin.Controllers
         public async Task<JsonResult> Delete(int categoryId)
         {
             var result = await _categoryService.Delete(categoryId, "Gökhan KÖKTEN");
-            var ajaxResult = JsonSerializer.Serialize(result);
-            return Json(ajaxResult);
+            var deletedCategory = JsonSerializer.Serialize(result.Data);
+            return Json(deletedCategory);
         }
     }
 }
