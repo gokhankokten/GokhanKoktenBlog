@@ -86,14 +86,14 @@ namespace GokhanKoktenBlog.Services.Concrete
             {
                 return new DataResult<CategoryListDto>(ResultStatus.Success, new CategoryListDto()
                 {
-                    CategoryList = categorylist,
+                    Categories = categorylist,
                     ResultStatus = ResultStatus.Success
 
                 });
             }
             return new DataResult<CategoryListDto>(ResultStatus.Error, new CategoryListDto
             {
-                CategoryList = null,
+                Categories = null,
                 ResultStatus = ResultStatus.Error,
                 Message = "Hiç bir Kategori Bulunamadı"
 
@@ -111,7 +111,7 @@ namespace GokhanKoktenBlog.Services.Concrete
                 return new DataResult<CategoryListDto>(ResultStatus.Success, new CategoryListDto()
                 {
                     ResultStatus = ResultStatus.Success,
-                    CategoryList = categories
+                    Categories = categories
                 });
             }
             return new DataResult<CategoryListDto>(ResultStatus.Error, null, "Hiç Bir Kategory bulunamadı");
@@ -125,7 +125,7 @@ namespace GokhanKoktenBlog.Services.Concrete
                 return new DataResult<CategoryListDto>(ResultStatus.Success, new CategoryListDto()
                 {
                     ResultStatus = ResultStatus.Success,
-                    CategoryList = categories
+                    Categories = categories
                 });
             }
             return new DataResult<CategoryListDto>(ResultStatus.Error, null, "Hiç Bir Kategory bulunamadı");

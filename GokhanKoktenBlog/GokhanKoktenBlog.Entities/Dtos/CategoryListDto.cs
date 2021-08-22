@@ -10,6 +10,6 @@ namespace GokhanKoktenBlog.Entities.Dtos
 {
     public class CategoryListDto:DtoGetBase
     {
-        public IList<Category> CategoryList { get; set; }
+        public IList<Category> Categories { get; set; }
     }
 }
