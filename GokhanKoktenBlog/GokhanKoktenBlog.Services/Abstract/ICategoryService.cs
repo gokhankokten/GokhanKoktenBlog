@@ -14,6 +14,7 @@ namespace GokhanKoktenBlog.Services.Abstract
     public interface ICategoryService
     {
         Task<IDataResult<CategoryDto>> Get(int categoyId);
+        Task<IDataResult<CategoryUpdateDto>> GetCategoryUpdateDto(int categoyId);
         Task<IDataResult<CategoryListDto>> GetAll();
         Task<IDataResult<CategoryListDto>> GetAllNonDeleted();
         Task<IDataResult<CategoryListDto>> GetAllNonDeletedAndActive();

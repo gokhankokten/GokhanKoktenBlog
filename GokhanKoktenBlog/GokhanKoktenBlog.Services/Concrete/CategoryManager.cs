@@ -133,7 +133,7 @@ namespace GokhanKoktenBlog.Services.Concrete
 
         public async Task<IDataResult<CategoryListDto>> GetAllNonDeletedAndActive()
         {
-            var categories = await _unitOfWork.Categories.GetAllAsync(c => c.IsDeleted && c.IsActive, c => c.Articles);
+            var categories = await _unitOfWork.Categories.GetAllAsync(c => !c.IsDeleted && c.IsActive, c => c.Articles);
             if (categories.Count > -1)
             {
                 return new DataResult<CategoryListDto>(ResultStatus.Success, new CategoryListDto()
@@ -180,6 +180,21 @@ namespace GokhanKoktenBlog.Services.Concrete
 
             }, $"{categoryUpdateDto.Name} adlı kategori başarıyla güncellendi");
 
+        }
+
+        public async Task<IDataResult<CategoryUpdateDto>> GetCategoryUpdateDto(int categoyId)
+        {
+            var result = await _unitOfWork.Categories.AnyAsync(c => c.Id == categoyId);
+            if (result)
+            {
+                var category = await _unitOfWork.Categories.GetAsync(c => c.Id == categoyId);
+                var categoryUpdateDto = _mapper.Map<CategoryUpdateDto>(category);
+                return new DataResult<CategoryUpdateDto>(ResultStatus.Success, categoryUpdateDto);
+            }
+            else
+            {
+                return new DataResult<CategoryUpdateDto>(ResultStatus.Error,null,"Böyle bir kategori bulunamadı.");
+            }
         }
     }
 }
