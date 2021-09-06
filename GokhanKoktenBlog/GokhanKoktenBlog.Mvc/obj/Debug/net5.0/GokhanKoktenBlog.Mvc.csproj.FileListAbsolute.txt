@@ -401,3 +401,4 @@ C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKokten
 C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Mvc\obj\Debug\net5.0\ref\GokhanKoktenBlog.Mvc.dll
 C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Mvc\obj\Debug\net5.0\GokhanKoktenBlog.Mvc.pdb
 C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Mvc\obj\Debug\net5.0\GokhanKoktenBlog.Mvc.genruntimeconfig.cache
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\_CategoryUpdatePartial.cshtml.g.cs
