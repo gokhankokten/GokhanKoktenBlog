@@ -28,7 +28,7 @@ namespace GokhanKoktenBlog.Data.Concrete.EnityFremework.Mappings
             builder.Property(c => c.IsDeleted).IsRequired();
             builder.Property(c => c.Note).HasMaxLength(500);
             builder.ToTable("Comments");
-            builder.HasData(
+         /*   builder.HasData(
                 new Comment
                 {
                     Id = 1,
@@ -70,7 +70,7 @@ namespace GokhanKoktenBlog.Data.Concrete.EnityFremework.Mappings
                     ModifiedByName = "InitialCreate",
                     ModifiedDate = DateTime.Now,
                     Note = "JavaScript Makale Yorumu",
-                });
+                }); */
         }
     }
 }

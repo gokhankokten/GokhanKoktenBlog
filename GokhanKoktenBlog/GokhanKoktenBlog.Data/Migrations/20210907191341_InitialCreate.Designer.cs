@@ -4,14 +4,16 @@ using GokhanKoktenBlog.Data.Concrete.EnityFremework.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GokhanKoktenBlog.Data.Migrations
 {
     [DbContext(typeof(GokhanKoktenBlogContext))]
-    partial class GokhanKoktenBlogContextModelSnapshot : ModelSnapshot
+    [Migration("20210907191341_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

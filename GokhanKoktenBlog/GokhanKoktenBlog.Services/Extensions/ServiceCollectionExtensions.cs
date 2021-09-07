@@ -1,6 +1,7 @@
 ﻿using GokhanKoktenBlog.Data.Abstract;
 using GokhanKoktenBlog.Data.Concrete;
 using GokhanKoktenBlog.Data.Concrete.EnityFremework.Contexts;
+using GokhanKoktenBlog.Entities.Concrete;
 using GokhanKoktenBlog.Services.Abstract;
 using GokhanKoktenBlog.Services.Concrete;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +18,7 @@ namespace GokhanKoktenBlog.Services.Extensions
         public static IServiceCollection LoadMyServices(this IServiceCollection serviceCollection)
         {
             serviceCollection.AddDbContext<GokhanKoktenBlogContext>();
+            serviceCollection.AddIdentity<User, Role>().AddEntityFrameworkStores<GokhanKoktenBlogContext>();
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
             serviceCollection.AddScoped<ICategoryService, CategoryManager>();
             serviceCollection.AddScoped<IArticleService, ArticleManager>();

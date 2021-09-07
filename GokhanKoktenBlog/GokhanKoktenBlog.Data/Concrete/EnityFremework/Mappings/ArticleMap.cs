@@ -42,7 +42,7 @@ namespace GokhanKoktenBlog.Data.Concrete.EnityFremework.Mappings
             builder.HasOne<Category>(a => a.Category).WithMany(c => c.Articles).HasForeignKey(a => a.CategoryId);
             builder.HasOne<User>(a => a.User).WithMany(u => u.Articles).HasForeignKey(a => a.UserId);
             builder.ToTable("Articles");
-            builder.HasData(
+         /*   builder.HasData(
                 new Article
                 {
                     Id = 1,
@@ -111,7 +111,7 @@ namespace GokhanKoktenBlog.Data.Concrete.EnityFremework.Mappings
                     UserId = 1,
                     ViewCount = 12,
                     CommentCount = 1
-                });
+                }); */
         
         }    
     }
