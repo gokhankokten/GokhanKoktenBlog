@@ -43,6 +43,7 @@ namespace GokhanKoktenBlog.Entities.Dtos
         [DisplayName("Resim")]
         [Required(ErrorMessage = "Lütfen, bir {0} Seçiniz.")]
         [DataType(DataType.Upload)]
-        public IFormFile Picture { get; set; }
+        public IFormFile PictureFile { get; set; }
+        public string Picture { get; set; }
     }
 }

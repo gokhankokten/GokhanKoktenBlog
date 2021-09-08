@@ -1,3 +1,4 @@
+using GokhanKoktenBlog.Mvc.AutoMapper.Profiles;
 using GokhanKoktenBlog.Services.AutoMapped.Profiles;
 using GokhanKoktenBlog.Services.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -24,7 +25,7 @@ namespace GokhanKoktenBlog.Mvc
                 opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
             });
             services.AddSession();
-            services.AddAutoMapper(typeof(ArticleProfile),typeof(CategoryProfile));
+            services.AddAutoMapper(typeof(ArticleProfile),typeof(CategoryProfile),typeof(UserProfile));
             services.LoadMyServices();
             services.ConfigureApplicationCookie(options =>
             {
