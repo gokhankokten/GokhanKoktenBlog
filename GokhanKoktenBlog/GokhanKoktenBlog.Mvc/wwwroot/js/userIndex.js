@@ -170,7 +170,7 @@
 
     /* Ajax POST / Posting the FormData as CategoryAddDto ends here. */
 
-    /* Ajax POST / Deleting a Category starts from here */
+    /* Ajax POST / Deleting a User starts from here */
 
     $(document).on('click',
         '.btn-delete',
@@ -178,10 +178,10 @@
             event.preventDefault();
             const id = $(this).attr('data-id');
             const tableRow = $(`[name="${id}"]`);
-            const categoryName = tableRow.find('td:eq(1)').text();
+            const userName = tableRow.find('td:eq(1)').text();
             Swal.fire({
                 title: 'Silmek istediğinize emin misiniz?',
-                text: `${categoryName} adlı kategori silinicektir!`,
+                text: `${userName} adlı user silinicektir!`,
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -193,23 +193,24 @@
                     $.ajax({
                         type: 'POST',
                         dataType: 'json',
-                        data: { categoryId: id },
-                        url: '/Admin/Category/Delete/',
+                        data: { userId: id },
+                        url: '/Admin/User/Delete/',
                         success: function (data) {
-                            const categoryDto = jQuery.parseJSON(data);
-                            if (categoryDto.ResultStatus === 0) {
+                            const userDto = jQuery.parseJSON(data);
+                            if (userDto.ResultStatus === 0) {
                                 Swal.fire(
                                     'Silindi!',
-                                    `${categoryDto.Category.Name} adlı kategori başarıyla silinmiştir.`,
+                                    `${userDto.User.UserName} adlı user başarıyla silinmiştir.`,
                                     'success'
                                 );
-
-                                tableRow.fadeOut(3500);
+                                debugger;
+                                dataTable.row(tableRow).remove().draw();
+                               // tableRow.fadeOut(3500);
                             } else {
                                 Swal.fire({
                                     icon: 'error',
                                     title: 'Başarısız İşlem!',
-                                    text: `${categoryDto.Message}`,
+                                    text: `${userDto.Message}`,
                                 });
                             }
                         },
@@ -222,17 +223,17 @@
             });
         });
 
-    /* Ajax GET / Getting the _CategoryUpdatePartial as Modal Form starts from here. */
+    /* Ajax GET / Getting the _UserUpdatePartial as Modal Form starts from here. */
 
     $(function () {
-        const url = '/Admin/Category/Update/';
+        const url = '/Admin/User/Update/';
         const placeHolderDiv = $('#modalPlaceHolder');
         $(document).on('click',
             '.btn-update',
             function (event) {
                 event.preventDefault();
                 const id = $(this).attr('data-id');
-                $.get(url, { categoryId: id }).done(function (data) {
+                $.get(url, { userId: id }).done(function (data) {
                     placeHolderDiv.html(data);
                     placeHolderDiv.find('.modal').modal('show');
                 }).fail(function () {

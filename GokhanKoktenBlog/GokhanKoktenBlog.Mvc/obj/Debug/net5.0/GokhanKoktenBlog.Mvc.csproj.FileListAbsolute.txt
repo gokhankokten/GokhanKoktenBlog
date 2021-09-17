@@ -405,3 +405,4 @@ C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKokten
 C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Mvc\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
 C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\User\_UserAddPartial.cshtml.g.cs
+C:\Users\Gökhan\Documents\GitHub\GokhanKoktenBlog\GokhanKoktenBlog\GokhanKoktenBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\User\_UserUpdatePartial.cshtml.g.cs
