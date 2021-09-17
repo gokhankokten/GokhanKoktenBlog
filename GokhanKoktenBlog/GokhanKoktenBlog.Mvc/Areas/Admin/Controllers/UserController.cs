@@ -42,6 +42,24 @@ namespace GokhanKoktenBlog.Mvc.Areas.Admin.Controllers
             });
         }
         [HttpGet]
+        public async Task<JsonResult> GetAllUsers()
+        {
+            var userEntity =await _userManager.Users.ToListAsync();
+            var userListDto = JsonSerializer.Serialize(new UserListDto()
+            {
+                Users = userEntity,
+                ResultStatus = ResultStatus.Success
+
+            },
+            new JsonSerializerOptions 
+            {
+                ReferenceHandler=System.Text.Json.Serialization.ReferenceHandler.Preserve
+            }
+            );
+            return Json(userListDto);
+        }
+
+        [HttpGet]
         public IActionResult Add()
         {
             return PartialView("_UserAddPartial");
